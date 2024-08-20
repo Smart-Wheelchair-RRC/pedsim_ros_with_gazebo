@@ -1,27 +1,11 @@
 #!/usr/bin/env python3
 
 import rospy
-from geometry_msgs.msg import Point, Quaternion, Pose, Twist, Vector3, TransformStamped
-from std_msgs.msg import Header
 from visualization_msgs.msg import Marker, MarkerArray
-from pedsim_msgs.msg import AgentStates, AgentState
-import tf2_ros
+from pedsim_msgs.msg import AgentStates
 from nav_msgs.msg import Odometry
-import tf2_geometry_msgs
 
 from message_filters import TimeSynchronizer, Subscriber
-
-
-def transform_pose(input_pose, source_frame="gazebo", target_frame="base_link"):
-    try:
-        transform: TransformStamped = tfBuffer.lookup_transform(
-            target_frame, source_frame, rospy.Time(0))
-        output_pose = tf2_geometry_msgs.do_transform_pose(
-            input_pose, transform)
-        return output_pose
-    except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException) as e:
-        rospy.logerr("Error transforming pose: {}".format(e))
-        return None
 
 
 def agent_states_callback(data: AgentStates, odom: Odometry):
@@ -32,7 +16,6 @@ def agent_states_callback(data: AgentStates, odom: Odometry):
         return
 
     for agent in data.agent_states:
-
         marker = Marker()
         marker.header = data.header
         marker.header.frame_id = "base_link"
@@ -40,8 +23,11 @@ def agent_states_callback(data: AgentStates, odom: Odometry):
         marker.id = marker_id
         marker.type = Marker.SPHERE
         marker.action = Marker.ADD
-        # print(agent)
-        marker.pose = transform_pose(agent).pose
+
+        marker.pose = agent.pose
+        marker.pose.position.x -= odom.pose.pose.position.x
+        marker.pose.position.y -= odom.pose.pose.position.y
+        marker.pose.position.z -= odom.pose.pose.position.z
 
         marker.scale.x = 0.2
         marker.scale.y = 0.2
@@ -61,18 +47,13 @@ def agent_states_callback(data: AgentStates, odom: Odometry):
     marker_array_pub.publish(marker_array)
 
 
-if __name__ == '__main__':
-    rospy.init_node('agent_states_to_markers')
+if __name__ == "__main__":
+    rospy.init_node("agent_states_to_markers")
 
-    global tfBuffer
-    tfBuffer = tf2_ros.Buffer()
-    listener = tf2_ros.TransformListener(tfBuffer)
     rospy.sleep(1)
-    odom_sub = Subscriber("/odom", Odometry)
-    agent_states_sub = Subscriber(
-        "/pedsim_simulator/simulated_agents", AgentStates)
-    marker_array_pub = rospy.Publisher(
-        "/marker", MarkerArray, queue_size=10)
+    odom_sub = Subscriber("/pedsim_simulator/robot_position", Odometry)
+    agent_states_sub = Subscriber("/pedsim_simulator/simulated_agents", AgentStates)
+    marker_array_pub = rospy.Publisher("/marker", MarkerArray, queue_size=10)
 
     ts = TimeSynchronizer([agent_states_sub, odom_sub], 10, 0.1)
     ts.registerCallback(agent_states_callback)
