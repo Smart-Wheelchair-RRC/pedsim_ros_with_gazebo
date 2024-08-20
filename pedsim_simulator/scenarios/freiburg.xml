@@ -78,7 +78,7 @@
         <addwaypoint id="robot_goal"/>
     </agent>
 
-    <!--AgentClusters>
+<!-- AgentClusters> -->
     <agent x="26" y="10.5" n="5" dx="0.5" dy="0.5" type="1">
         <addwaypoint id="enter_eastdoor"/>
         <addwaypoint id="enter_eastroom"/>
@@ -115,7 +115,7 @@
     </agent>
     <agent x="1.5" y="11" n="1" dx="1" dy="1" type="1">
         <addwaypoint id="south_middleroom"/>
-    </agent-->
+</agent>
 
 
 </scenario>

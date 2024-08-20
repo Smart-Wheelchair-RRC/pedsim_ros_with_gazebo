@@ -113,8 +113,8 @@ if __name__ == "__main__":
     control_speed = 0
     control_turn = 0
     try:
-        print (msg)
-        print (vels(speed, turn))
+        print(msg)
+        print(vels(speed, turn))
         while(1):
             key = getKey()
             if key in moveBindings.keys():
@@ -126,7 +126,7 @@ if __name__ == "__main__":
                 turn = turn * speedBindings[key][1]
                 count = 0
 
-                print (vels(speed, turn))
+                print(vels(speed, turn))
                 if (status == 14):
                     print (msg)
                 status = (status + 1) % 15
@@ -170,8 +170,7 @@ if __name__ == "__main__":
             pub.publish(twist)
 
     except:
-        # print(e)
-        ...
+        print (e)
 
     finally:
         twist = Twist()

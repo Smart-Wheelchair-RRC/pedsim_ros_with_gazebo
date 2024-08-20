@@ -141,7 +141,7 @@
     <waypoint id="left_hall" x="30" y="9" r="3"/>
 
     <waypoint id="enter_restroom" x="14" y="22" r="3"/>
-    <waypoint id="enter_classroom" x="14" y="6" r="3"/>
+    <waypoint id="enter_classroom" x="16" y="6" r="3"/>
     <waypoint id="enter_stair" x="14.5" y="10" r="5"/>
 
     <waypoint id="robot_goal" x="26" y="23" r="5"/>
@@ -162,38 +162,38 @@
     </agent>
 
         <!--AgentClusters-->
-    <agent x="1" y="10" n="5" dx="1" dy="1.5" type="1">
+    <agent x="1" y="10" n="8" dx="1" dy="1.5" type="1">
         <addwaypoint id="bookshop_entry"/>
         <addwaypoint id="bookshop_exit"/>
         <addwaypoint id="coffee_entry"/>
         <addwaypoint id="coffee_exit"/>
     </agent>
 
-    <agent x="22" y="20" n="3" dx="1.5" dy="1" type="1">
+    <agent x="22" y="20" n="8" dx="1.5" dy="1" type="1">
         <addwaypoint id="coffee_entry"/>
         <addwaypoint id="coffee_exit"/>
         <addwaypoint id="bookshop_entry"/>
         <addwaypoint id="bookshop_exit"/>
     </agent>
 
-    <agent x="18" y="19" n="3" dx="1.5" dy="1" type="1">
+    <agent x="18" y="19" n="5" dx="1.5" dy="1" type="1">
         <addwaypoint id="coffee_entry"/>
         <addwaypoint id="bookshop_exit"/>
     </agent>
 
-    <agent x="30" y="10" n="3" dx="1.5" dy="1" type="1">
+    <agent x="30" y="10" n="5" dx="1.5" dy="1" type="1">
         <addwaypoint id="left_hall"/>
         <addwaypoint id="coffee_exit"/>
     </agent>
 
-    <agent x="2" y="15" n="2" dx="1" dy="1.5" type="1">
+    <agent x="2" y="15" n="4" dx="1" dy="1.5" type="1">
         <addwaypoint id="enter_lift"/>
         <addwaypoint id="enter_westdoor"/>
     </agent>
 
-    <agent x="14" y="15" n="2" dx="0.8" dy="1.5" type="1">
-        <addwaypoint id="coffee_entry"/>
-        <addwaypoint id="enter_southdoor"/>
+    <agent x="14" y="15" n="4" dx="0.8" dy="1.5" type="1">
+        <addwaypoint id="enter_restroom"/>
+        <addwaypoint id="enter_classroom"/>
     </agent>
 
     
