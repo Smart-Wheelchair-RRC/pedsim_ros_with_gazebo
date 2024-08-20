@@ -1,23 +1,28 @@
 <launch>
   <param name="use_sim_time" value="true"/>
   <arg name="kbd_teleop" default="false"/>
-  <arg name="rqt_teleop" default="true"/>
-  <arg name="scene_file" default="$(find pedsim_simulator)/scenarios/eng_hall.xml"/>
-  <arg name="world_name" default="$(find pedsim_gazebo_plugin)/worlds/eng_hall.world"/>
+<arg name="rqt_teleop" default="true"/>
+
+<arg name="scene_file" default="$(find pedsim_simulator)/scenarios/eng_hall.xml"/>
+<arg name="world_name" default="$(find pedsim_gazebo_plugin)/worlds/eng_hall.world"/>
+
+
   <arg name="default_queue_size" default="10"/>
   <arg name="max_robot_speed" default="1.5"/>
   <arg name="robot_mode" default="1"/>
   <arg name="enable_groups" default="true"/>
   <arg name="with_robot" default="true"/>
   <!-- lobby: (1,1); square: (1,1); cumberland: (4,8); autolab: (1,8); freiburg: (3,17) -->
-  <arg name="pose_initial_x" default="1.0"/> 
-  <arg name="pose_initial_y" default="1.0"/>
+<arg name="pose_initial_x" default="3.0"/>
+<arg name="pose_initial_y" default="17.0"/>
+
   <arg name="pose_initial_theta" default="0.0"/>
   <arg name="simulation_factor" default="1"/>
-  <arg name="update_rate" default="25.0"/>
+<arg name="update_rate" default="50.0"/>
+<arg name="visualize" default="true"/>
+<arg name="gui" default="True" doc="Bring up the Gazebo graphical interface"/>
 
-  <arg name="visualize" default="true"/>
-  <arg name="gui" default="true" doc="Bring up the Gazebo graphical interface"/>
+
 
   <!-- Gazebo -->
   <!--include file="$(find pedsim_gazebo_plugin)/launch/eng_hall.launch"/-->
@@ -43,17 +48,17 @@
   <arg name="laser_sensor" value="$(optenv ROBOT_LASER_SENSOR hokuyo_kinect)"/>  <!-- laser, hokuyo lidar -->
   <arg name="3d_sensor"    value="$(optenv TURTLEBOT_3D_SENSOR kinect)"/>  <!-- kinect, asus_xtion_pro -->
 
-  <include file="$(find robot_gazebo)/launch/includes/$(arg base).launch.xml">
+<include file="$(find robot_gazebo)/launch/includes/$(arg base).launch.xml">
       <arg name="base" value="$(arg base)"/>
       <arg name="stacks" value="$(arg stacks)"/>
       <arg name="3d_sensor" value="$(arg 3d_sensor)"/>
       <arg name="laser_sensor" value="$(arg laser_sensor)"/>
       <arg name="initial_pose" value="-x $(arg pose_initial_x) -y $(arg pose_initial_y) -Y $(arg pose_initial_theta)"/>
-  </include>
+</include>
 
-  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
       <param name="publish_frequency" type="double" value="30.0" />
-  </node>
+</node>
 
   <!-- main simulator node -->
   <node name="pedsim_simulator" pkg="pedsim_simulator" type="pedsim_simulator" output="screen">
@@ -70,6 +75,7 @@
   <!-- Visualizer -->
   <include file="$(find pedsim_visualizer)/launch/visualizer.launch"/>
 
-  <!-- Rviz -->
-  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find pedsim_simulator)/rviz/demo_final.rviz" if="$(arg visualize)"/>
+<!-- Marker Publisher -->
+<node pkg="pedsim_simulator" type="agent_state_to_marker.py" name="agent_state_to_markerr" output="screen" />
+
 </launch>
