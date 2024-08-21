@@ -73,7 +73,7 @@ if __name__ == "__main__":
 
     odom_sub = Subscriber("/pedsim_simulator/robot_position", Odometry)
     agent_states_sub = Subscriber("/pedsim_simulator/simulated_agents", AgentStates)
-    marker_array_pub = rospy.Publisher("/marker_gt", MarkerArray, queue_size=10)
+    marker_array_pub = rospy.Publisher("/marker", MarkerArray, queue_size=10)
 
     ts = TimeSynchronizer([agent_states_sub, odom_sub], 10, 0.1)
     ts.registerCallback(agent_states_callback)
