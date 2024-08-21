@@ -36,7 +36,7 @@
 
   <!-- Place gazebo frame at map frame -->
   <node pkg="tf" type="static_transform_publisher" name="gazebo_map_broadcaster"
-      args="-1 -1 0 0 0 0  odom gazebo 100"/>
+      args="$(arg pose_initial_x) $(arg pose_initial_y) 0 0 0 0  gazebo odom 100"/>
   <!--node pkg="nav_cnn" name="gazebo_odom_broadcaster" type="gazebo_odom_broadcaster.py" output="screen" /-->
 
   <!-- Turtlebot -->
