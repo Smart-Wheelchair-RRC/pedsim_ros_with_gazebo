@@ -17,10 +17,6 @@ def transform_pose(
         transform: TransformStamped = tfBuffer.lookup_transform(
             target_frame, source_frame, rospy.Time(0)
         )
-        print(transform.transform)
-
-        # transform.transform.rotation.z *= -1
-        # transform.transform.rotation.w *= -1
 
         output_pose: PoseStamped = tf2_geometry_msgs.do_transform_pose(
             input_pose, transform
@@ -51,13 +47,7 @@ def agent_states_callback(data: AgentStates, odom: Odometry):
         marker.type = Marker.SPHERE
         marker.action = Marker.ADD
 
-        # marker.pose = agent.pose
-        print(agent.pose)
-        # marker.pose = agent.pose
         marker.pose = transform_pose(agent).pose
-        # marker.pose.position.x -= odom.pose.pose.position.x
-        # marker.pose.position.y -= odom.pose.pose.position.y
-        # marker.pose.position.z -= odom.pose.pose.position.z
 
         print("Transformed", marker.pose)
         marker.scale.x = 0.2
@@ -67,10 +57,6 @@ def agent_states_callback(data: AgentStates, odom: Odometry):
         marker.color.g = 1.0
         marker.color.b = 0.0
         marker.color.a = 1.0
-
-        # Transform the agent's pose from gazebo to base_link
-        # agent_pose_transformed = transform_pose(trans, agent.pose)
-        # marker.pose = agent_pose_transformed
 
         marker_array.markers.append(marker)
         marker_id += 1
