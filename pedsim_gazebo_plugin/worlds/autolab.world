@@ -53,13 +53,6 @@
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -78,7 +71,7 @@
           <geometry>
             <box>
             
-	     <size> 0.8 .2  2.8 </size>
+	     <size> 0.7999999999999998 .2  2.8 </size>
 
       	   </box>
           </geometry>
@@ -101,17 +94,10 @@
           <geometry>
             <box>
             
-	     <size> 0.8 .2  2.8 </size>
+	     <size> 0.7999999999999998 .2  2.8 </size>
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -157,13 +143,6 @@
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -209,13 +188,6 @@
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -228,13 +200,13 @@
       <static>1</static>
       <link name='link'>
       
-	  <pose frame=''>13.4 1.0  1.4 0 0 0.0</pose>
+	  <pose frame=''>13.399999999999999 1.0  1.4 0 0 0.0</pose>
     
         <collision name='collision'>
           <geometry>
             <box>
             
-	     <size> 3.6 .2  2.8 </size>
+	     <size> 3.5999999999999996 .2  2.8 </size>
 
       	   </box>
           </geometry>
@@ -257,17 +229,10 @@
           <geometry>
             <box>
             
-	     <size> 3.6 .2  2.8 </size>
+	     <size> 3.5999999999999996 .2  2.8 </size>
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -313,13 +278,6 @@
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -338,7 +296,7 @@
           <geometry>
             <box>
             
-	     <size> 9.1 .2  2.8 </size>
+	     <size> 9.100000000000001 .2  2.8 </size>
 
       	   </box>
           </geometry>
@@ -361,17 +319,10 @@
           <geometry>
             <box>
             
-	     <size> 9.1 .2  2.8 </size>
+	     <size> 9.100000000000001 .2  2.8 </size>
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -384,7 +335,7 @@
       <static>1</static>
       <link name='link'>
       
-	  <pose frame=''>23.6 7.55  1.4 0 0 1.57</pose>
+	  <pose frame=''>23.6 7.550000000000001  1.4 0 0 1.57</pose>
     
         <collision name='collision'>
           <geometry>
@@ -417,13 +368,6 @@
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -469,13 +413,6 @@
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -521,13 +458,6 @@
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -546,7 +476,7 @@
           <geometry>
             <box>
             
-	     <size> 0.4 .2  2.8 </size>
+	     <size> 0.40000000000000036 .2  2.8 </size>
 
       	   </box>
           </geometry>
@@ -569,17 +499,10 @@
           <geometry>
             <box>
             
-	     <size> 0.4 .2  2.8 </size>
+	     <size> 0.40000000000000036 .2  2.8 </size>
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -598,7 +521,7 @@
           <geometry>
             <box>
             
-	     <size> 3.1 .2  2.8 </size>
+	     <size> 3.1000000000000014 .2  2.8 </size>
 
       	   </box>
           </geometry>
@@ -621,17 +544,10 @@
           <geometry>
             <box>
             
-	     <size> 3.1 .2  2.8 </size>
+	     <size> 3.1000000000000014 .2  2.8 </size>
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -644,13 +560,13 @@
       <static>1</static>
       <link name='link'>
       
-	  <pose frame=''>11.6 13.6  1.4 0 0 1.57</pose>
+	  <pose frame=''>11.6 13.600000000000001  1.4 0 0 1.57</pose>
     
         <collision name='collision'>
           <geometry>
             <box>
             
-	     <size> 3.6 .2  2.8 </size>
+	     <size> 3.5999999999999996 .2  2.8 </size>
 
       	   </box>
           </geometry>
@@ -673,17 +589,10 @@
           <geometry>
             <box>
             
-	     <size> 3.6 .2  2.8 </size>
+	     <size> 3.5999999999999996 .2  2.8 </size>
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -696,13 +605,13 @@
       <static>1</static>
       <link name='link'>
       
-	  <pose frame=''>14.6 15.4  1.4 0 0 0.0</pose>
+	  <pose frame=''>14.600000000000001 15.4  1.4 0 0 0.0</pose>
     
         <collision name='collision'>
           <geometry>
             <box>
             
-	     <size> 6.0 .2  2.8 </size>
+	     <size> 6.000000000000002 .2  2.8 </size>
 
       	   </box>
           </geometry>
@@ -725,17 +634,10 @@
           <geometry>
             <box>
             
-	     <size> 6.0 .2  2.8 </size>
+	     <size> 6.000000000000002 .2  2.8 </size>
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -781,13 +683,6 @@
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -806,7 +701,7 @@
           <geometry>
             <box>
             
-	     <size> 3.8 .2  2.8 </size>
+	     <size> 3.8000000000000007 .2  2.8 </size>
 
       	   </box>
           </geometry>
@@ -829,17 +724,10 @@
           <geometry>
             <box>
             
-	     <size> 3.8 .2  2.8 </size>
+	     <size> 3.8000000000000007 .2  2.8 </size>
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -858,7 +746,7 @@
           <geometry>
             <box>
             
-	     <size> 3.1 .2  2.8 </size>
+	     <size> 3.0999999999999996 .2  2.8 </size>
 
       	   </box>
           </geometry>
@@ -881,17 +769,10 @@
           <geometry>
             <box>
             
-	     <size> 3.1 .2  2.8 </size>
+	     <size> 3.0999999999999996 .2  2.8 </size>
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -910,7 +791,7 @@
           <geometry>
             <box>
             
-	     <size> 0.6 .2  2.8 </size>
+	     <size> 0.6000000000000005 .2  2.8 </size>
 
       	   </box>
           </geometry>
@@ -933,17 +814,10 @@
           <geometry>
             <box>
             
-	     <size> 0.6 .2  2.8 </size>
+	     <size> 0.6000000000000005 .2  2.8 </size>
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -962,7 +836,7 @@
           <geometry>
             <box>
             
-	     <size> 3.2 .2  2.8 </size>
+	     <size> 3.1999999999999993 .2  2.8 </size>
 
       	   </box>
           </geometry>
@@ -985,17 +859,10 @@
           <geometry>
             <box>
             
-	     <size> 3.2 .2  2.8 </size>
+	     <size> 3.1999999999999993 .2  2.8 </size>
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -1041,13 +908,6 @@
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -1093,13 +953,6 @@
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -1118,7 +971,7 @@
           <geometry>
             <box>
             
-	     <size> 2.4 .2  2.8 </size>
+	     <size> 2.3999999999999995 .2  2.8 </size>
 
       	   </box>
           </geometry>
@@ -1141,17 +994,10 @@
           <geometry>
             <box>
             
-	     <size> 2.4 .2  2.8 </size>
+	     <size> 2.3999999999999995 .2  2.8 </size>
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -1170,7 +1016,7 @@
           <geometry>
             <box>
             
-	     <size> 2.4 .2  2.8 </size>
+	     <size> 2.3999999999999995 .2  2.8 </size>
 
       	   </box>
           </geometry>
@@ -1193,17 +1039,10 @@
           <geometry>
             <box>
             
-	     <size> 2.4 .2  2.8 </size>
+	     <size> 2.3999999999999995 .2  2.8 </size>
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -1249,13 +1088,6 @@
 
       	   </box>
        </geometry>
-          <material>
-            <script>
-              <uri>model://grey_wall/materials/scripts</uri>
-              <uri>model://grey_wall/materials/textures</uri>
-              <name>vrc/grey_wall</name>
-            </script>
-          </material>
         </visual>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>

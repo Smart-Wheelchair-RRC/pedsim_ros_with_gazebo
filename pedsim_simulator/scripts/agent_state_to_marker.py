@@ -49,7 +49,6 @@ def agent_states_callback(data: AgentStates, odom: Odometry):
 
         marker.pose = transform_pose(agent).pose
 
-        print("Transformed", marker.pose)
         marker.scale.x = 0.2
         marker.scale.y = 0.2
         marker.scale.z = 0.2
