@@ -1,9 +1,11 @@
 <launch>
   <param name="use_sim_time" value="true"/>
   <arg name="kbd_teleop" default="false"/>
-  <arg name="rqt_teleop" default="false"/>
-  <arg name="scene_file" default="$(find pedsim_simulator)/scenarios/nav_test.xml"/>
-  <arg name="world_name" default="$(find pedsim_gazebo_plugin)/worlds/nav_test.world"/>
+<arg name="rqt_teleop" default="true"/>
+
+<arg name="scene_file" default="$(find pedsim_simulator)/scenarios/freiburg.xml"/>
+<arg name="world_name" default="$(find pedsim_gazebo_plugin)/worlds/freiburg.world"/>
+
 
   <arg name="default_queue_size" default="10"/>
   <arg name="max_robot_speed" default="1.5"/>
@@ -11,8 +13,8 @@
   <arg name="enable_groups" default="true"/>
   <arg name="with_robot" default="true"/>
   <!-- lobby: (1,1); square: (1,1); cumberland: (4,8); autolab: (1,8); freiburg: (3,17) -->
-  <arg name="pose_initial_x" default="1.0"/>
-  <arg name="pose_initial_y" default="1.0"/>
+<arg name="pose_initial_x" default="1.0"/>
+<arg name="pose_initial_y" default="8.0"/>
 
   <arg name="pose_initial_theta" default="0.0"/>
   <arg name="simulation_factor" default="1"/>
@@ -34,8 +36,8 @@
   </node>
 
   <!-- Place gazebo frame at map frame -->
-  <node pkg="tf" type="static_transform_publisher" name="gazebo_map_broadcaster" args="-1 -1 0 0 0 0  odom gazebo 100"/>
-
+  <node pkg="tf" type="static_transform_publisher" name="gazebo_map_broadcaster"
+      args="$(arg pose_initial_x) $(arg pose_initial_y) 0 0 0 0  gazebo odom 100"/>
   <!--node pkg="nav_cnn" name="gazebo_odom_broadcaster" type="gazebo_odom_broadcaster.py" output="screen" /-->
 
   <!-- Turtlebot -->
