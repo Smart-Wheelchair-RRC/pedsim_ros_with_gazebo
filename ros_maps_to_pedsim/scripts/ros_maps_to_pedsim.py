@@ -69,7 +69,7 @@ def add_waypoints_and_agent(scenario, agents_info):
         w = waypoints[id]
         add_waypoint(scenario, id, w[0], w[1], w[2])
 
-    agents_keys = agents_info.keys()
+    agents_keys = list(agents_info.keys())
     agents_keys.remove('waypoints')
     for key in agents_keys:
         agent = agents_info[key]
@@ -139,8 +139,8 @@ def scenario_from_map(map_image, map_metadata, use_map_origin=False):
     y_min = np.maximum(0, y_free[0]-1)
     y_max = np.minimum(sz[1], y_free[-1]+2)
 
-    for x in xrange(x_min, x_max):
-        for y in xrange(y_min, y_max):
+    for x in range(x_min, x_max):
+        for y in range(y_min, y_max):
             is_free = map_binary[x, y]
             window = get_window(map_binary, x, y)
             if ~is_free and np.any(window) and np.any(~window):
@@ -167,8 +167,14 @@ def write_xml(tree, file_path, indent="  "):
 if __name__ == '__main__':
     rospy.init_node('ros_maps_to_pedsim', anonymous=True)
 
-    map_path = rospy.get_param("~map_path", ".")
-    map_name = rospy.get_param("~map_name", "map.yaml")
+    map_path = rospy.get_param(
+        "~map_path",
+        "/home/radtop/pedsim_ws/src/aws-robomaker-bookstore-world/maps/turtlebot3_waffle_pi",
+    )
+    map_name = rospy.get_param(
+        "~map_name",
+        "/home/radtop/pedsim_ws/src/aws-robomaker-bookstore-world/maps/turtlebot3_waffle_pi/map.yaml",
+    )
     scenario_path = rospy.get_param("~scenario_path", ".")
     scenario_name = rospy.get_param("~scenario_name", "scene.xml")
     use_map_origin = rospy.get_param("~use_map_origin", False)
