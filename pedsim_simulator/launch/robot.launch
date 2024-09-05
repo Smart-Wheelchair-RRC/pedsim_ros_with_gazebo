@@ -1,11 +1,11 @@
 <launch>
   <param name="use_sim_time" value="true"/>
   <arg name="kbd_teleop" default="false"/>
-<arg name="rqt_teleop" default="true"/>
+  <arg name="rqt_teleop" default="true"/>
 
-<arg name="scene_file" default="$(find pedsim_simulator)/scenarios/freiburg.xml"/>
-<arg name="world_name" default="$(find pedsim_gazebo_plugin)/worlds/freiburg.world"/>
-
+  <arg name="scene_file" default="$(find pedsim_simulator)/scenarios/freiburg.xml"/>
+  <arg name="world_name" default="$(find pedsim_gazebo_plugin)/worlds/freiburg.world"/>
+  <arg name="frame_id" default="map" />
 
   <arg name="default_queue_size" default="10"/>
   <arg name="max_robot_speed" default="1.5"/>
@@ -13,8 +13,8 @@
   <arg name="enable_groups" default="true"/>
   <arg name="with_robot" default="true"/>
   <!-- lobby: (1,1); square: (1,1); cumberland: (4,8); autolab: (1,8); freiburg: (3,17) -->
-<arg name="pose_initial_x" default="1.0"/>
-<arg name="pose_initial_y" default="8.0"/>
+  <arg name="pose_initial_x" default="1.0"/>
+  <arg name="pose_initial_y" default="8.0"/>
 
   <arg name="pose_initial_theta" default="0.0"/>
   <arg name="simulation_factor" default="1"/>
@@ -27,21 +27,19 @@
   <!-- Gazebo -->
   <!--include file="$(find pedsim_gazebo_plugin)/launch/eng_hall.launch"/-->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-  <arg name="world_name" value="$(arg world_name)"/>
-  <arg name="gui" value="$(arg gui)" />
-
+    <arg name="world_name" value="$(arg world_name)"/>
+    <arg name="gui" value="$(arg gui)" />
   </include>
-<!-- this node spawn pedsim actors to gazebo once, then the plugin updates their pose -->
+  <!-- this node spawn pedsim actors to gazebo once, then the plugin updates their pose -->
   <node pkg="pedsim_gazebo_plugin" type="spawn_pedsim_agents.py" name="spawn_pedsim_agents" output="screen">
   </node>
 
   <!-- Place gazebo frame at map frame -->
-  <node pkg="tf" type="static_transform_publisher" name="gazebo_map_broadcaster"
-      args="$(arg pose_initial_x) $(arg pose_initial_y) 0 0 0 0  gazebo odom 100"/>
+  <node pkg="tf" type="static_transform_publisher" name="gazebo_map_broadcaster" args="$(arg pose_initial_x) $(arg pose_initial_y) 0 0 0 0  $(arg frame_id) odom 100"/>
   <!--node pkg="nav_cnn" name="gazebo_odom_broadcaster" type="gazebo_odom_broadcaster.py" output="screen" /-->
 
   <!-- Turtlebot -->
-<arg name="base" value="$(optenv ROBOT_BASE kobuki)"/>
+  <arg name="base" value="$(optenv ROBOT_BASE kobuki)"/>
   <!-- create, roomba -->
   <arg name="battery" value="$(optenv ROBOT_BATTERY /proc/acpi/battery/BAT0)"/>
   <!-- /proc/acpi/battery/BAT0 -->
@@ -74,7 +72,7 @@
     <param name="enable_groups" value="$(arg enable_groups)" type="bool"/>
     <param name="simulation_factor" value="$(arg simulation_factor)" type="double"/>
     <param name="update_rate" value="$(arg update_rate)" type="double"/>
-    <param name="frame_id" value="gazebo" />
+    <param name="frame_id" value="$(arg frame_id)" type="string"/>
   </node>
 
   <!-- Visualizer -->

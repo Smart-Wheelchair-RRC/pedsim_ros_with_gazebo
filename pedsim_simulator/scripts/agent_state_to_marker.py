@@ -11,7 +11,7 @@ from geometry_msgs.msg import PoseStamped, TransformStamped
 
 
 def transform_pose(
-    input_pose, source_frame="gazebo", target_frame="base_link"
+    input_pose, source_frame="map", target_frame="base_link"
 ) -> PoseStamped:
     try:
         transform: TransformStamped = tfBuffer.lookup_transform(
@@ -46,9 +46,11 @@ def agent_states_callback(data: AgentStates, odom: Odometry):
         marker.id = marker_id
         marker.type = Marker.SPHERE
         marker.action = Marker.ADD
-
-        marker.pose = transform_pose(agent).pose
-
+        try:
+            marker.pose = transform_pose(agent).pose
+        except AttributeError as e:
+            print("Error transforming pose", e)
+            continue
         marker.scale.x = 0.2
         marker.scale.y = 0.2
         marker.scale.z = 0.2
