@@ -2566,4 +2566,31 @@
   <obstacle x1="6.925" x2="6.875" y1="3.925" y2="3.975"/>
   <obstacle x1="6.975" x2="6.925" y1="3.925" y2="3.975"/>
   <obstacle x1="7.025" x2="6.975" y1="3.925" y2="3.975"/>
+<!--Waypoints (incl. WaitingQueues)-->
+
+<waypoint id="a" x="16" y="18" r="2"/>
+<waypoint id="b" x="17" y="5" r="2"/>
+<waypoint id="c" x="9" y="6" r="2"/>
+<waypoint id="d" x="10" y="13" r="2"/>
+
+
+<!-- Agents -->
+
+<agent x="16" y="18" n="4" dx="0" dy="0" type="1">
+  <addwaypoint id="a"/>
+  <addwaypoint id="b"/>
+  <addwaypoint id="c"/>
+</agent>
+
+<agent x="17" y="5" n="4" dx="0" dy="0" type="1">
+  <addwaypoint id="b"/>
+  <addwaypoint id="c"/>
+  <addwaypoint id="d"/>
+</agent>
+
+<agent x="9" y="5" n="6" dx="0" dy="0" type="1">
+  <addwaypoint id="c"/>
+  <addwaypoint id="d"/>
+  <addwaypoint id="a"/>
+</agent>
 </scenario>
