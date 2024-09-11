@@ -1,10 +1,10 @@
 <launch>
-<arg name="map_path" default="/home/radtop/pedsim_ws/src/aws-robomaker-bookstore-world/maps/turtlebot3_waffle_pi"/>
+<arg name="map_path" default="/home/wheelchair/local_dynamic_navigation_ws/src/robot_gazebo/maps/gazebo_hospital"/>
 
-  <arg name="map_name" default="map.yaml"/>
+  <arg name="map_name" default="gazebo_hospital.yaml"/>
   <arg name="scenario_path" default="$(arg map_path)"/>
-  <arg name="scenario_name" default="scene.xml"/>
-  <arg name="use_map_origin" default="false"/>
+  <arg name="scenario_name" default="hospital.xml"/>
+  <arg name="use_map_origin" default="true"/>
   
   <arg name="add_agents" default="true"/>
   <arg name="agents_info_path" default="$(arg map_path)"/>

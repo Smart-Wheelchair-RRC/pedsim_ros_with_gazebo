@@ -3,8 +3,8 @@
   <arg name="kbd_teleop" default="false"/>
   <arg name="rqt_teleop" default="true"/>
 
-  <arg name="scene_file" default="$(find pedsim_simulator)/scenarios/eng_hall.xml"/>
-  <arg name="world_name" default="$(find pedsim_gazebo_plugin)/worlds/eng_hall.world"/>
+  <arg name="scene_file" default="$(find pedsim_simulator)/scenarios/hospital.xml"/>
+  <arg name="world_name" default="$(find pedsim_gazebo_plugin)/worlds/hospital.world"/>
   <arg name="frame_id" default="map" />
 
   <arg name="default_queue_size" default="10"/>
