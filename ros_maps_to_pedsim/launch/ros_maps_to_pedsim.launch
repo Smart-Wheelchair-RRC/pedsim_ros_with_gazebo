@@ -1,5 +1,5 @@
 <launch>
-<arg name="map_path" default="/home/wheelchair/local_dynamic_navigation_ws/src/robot_gazebo/maps/gazebo_hospital"/>
+<arg name="map_path" default="$(find pedsim_ros)/robot_gazebo/maps/gazebo_hospital"/>
 
   <arg name="map_name" default="gazebo_hospital.yaml"/>
   <arg name="scenario_path" default="$(arg map_path)"/>
