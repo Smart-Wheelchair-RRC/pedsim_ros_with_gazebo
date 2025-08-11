@@ -35,7 +35,7 @@ cd catkin_ws
 mkdir src
 cd src
 git clone https://github.com/TempleRAIL/robot_gazebo.git
-git clone https://github.com/TempleRAIL/pedsim_ros_with_gazebo.git
+git clone https://github.com/Smart-Wheelchair-RRC/pedsim_ros_with_gazebo.git
 wget https://raw.githubusercontent.com/zzuxzt/turtlebot2_noetic_packages/master/turtlebot2_noetic_install.sh 
 sudo sh turtlebot2_noetic_install.sh 
 cd ..
