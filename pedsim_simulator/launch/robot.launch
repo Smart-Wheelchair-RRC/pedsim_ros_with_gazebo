@@ -80,7 +80,7 @@
   <!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find local_dynamic_nav)/rviz/local_dynamic.rviz"/> -->
 
   <!-- Marker Publisher -->
-  <node pkg="pedsim_simulator" type="agent_state_to_marker.py" name="agent_state_to_markerr" output="screen" />
+  <!-- <node pkg="pedsim_simulator" type="agent_state_to_marker.py" name="agent_state_to_markerr" output="screen" /> -->
 
 
 </launch>
